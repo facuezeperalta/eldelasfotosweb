@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #f2f2f2;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3 {
+        font-family: Lexend-Thin, Lexend;
+        font-size: 12.53px;
+        font-variation-settings: 'wght' 100;
+        font-weight: 200;
+      }
+
+      .cls-3, .cls-4 {
+        fill: #d9d9d9;
+      }
+
+      .cls-5 {
+        fill: #404040;
+      }
+
+      .cls-6 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-7 {
+        fill: #f2f2f2;
+        font-family: Lexend-Medium, Lexend;
+        font-size: 30.27px;
+        font-variation-settings: 'wght' 500;
+        font-weight: 500;
+      }
+
+      .cls-4 {
+        font-family: Lexend-Regular, Lexend;
+        font-size: 6.25px;
+        font-variation-settings: 'wght' 400;
+      }
+
+      .cls-2 {
+        stroke: #0d0d0d;
+        stroke-width: .25px;
+      }
+    </style>
+  </defs>
+  <circle class="cls-5" cx="55" cy="55" r="50.39"/>
+  <polyline class="cls-1" points="56.68 70.44 96.92 70.44 96.92 34.13"/>
+  <polyline class="cls-1" points="53.32 34.13 13.08 34.13 13.08 70.44"/>
+  <text class="cls-3" transform="translate(15.53 72.8)"><tspan class="cls-6" x="0" y="0">F</tspan><tspan x="7.01" y="0">acu.P</tspan></text>
+  <text class="cls-7" transform="translate(14.38 61.44)"><tspan x="0" y="0">EDLF</tspan></text>
+  <circle class="cls-2" cx="55" cy="55" r="51.57"/>
+  <text class="cls-4" transform="translate(37.25 97.78)"><tspan x="0" y="0">SINCE 2016</tspan></text>
+</svg>
