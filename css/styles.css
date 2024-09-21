@@ -18,6 +18,7 @@ html {
   justify-content: space-around;
   align-items: center;
   background-color: #F2F2F2;
+  padding: 0.5rem;
 }
 .nav-bar .edlficon-img {
   width: 4rem;
@@ -26,4 +27,8 @@ html {
 .nav-bar .menu-icon {
   width: 4rem;
   height: 4rem;
+}
+.nav-bar .nav-bar-title {
+  font-size: 2rem;
+  font-weight: 200;
 }/*# sourceMappingURL=styles.css.map */
