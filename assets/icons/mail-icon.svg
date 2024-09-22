@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Bg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44.9 26.31">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    </style>
+  </defs>
+  <g>
+    <rect class="cls-1" x=".46" y=".46" width="43.98" height="25.39" rx=".46" ry=".46"/>
+    <path d="M43.98.92v24.46H.92V.92h43.06M43.98,0H.92C.41,0,0,.41,0,.92v24.46c0,.51.41.92.92.92h43.06c.51,0,.92-.41.92-.92V.92c0-.51-.41-.92-.92-.92h0Z"/>
+  </g>
+  <polyline class="cls-2" points=".92 .92 22.45 11.6 43.98 .92"/>
+</svg>

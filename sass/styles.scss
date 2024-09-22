@@ -3,12 +3,29 @@ $font-stack: "Poppins", sans-serif;
 $white-navbar-footer: #F2F2F2;
 $gray-elements: #737373;
 $color-yellow: #F2CF66;
+$yellow-over: #907a3a;
 $text-color: #F2F2F2;
-
+$black-color: #262626;
+$circle-dark-color: #404040;
 //Mixins a usar
 @mixin iconsize{
     width: 4rem;
     height: 4rem;
+}
+
+@mixin circleServices{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+    text-align: center;
+    font-size: 3.2rem;
+    margin-top: 1.2rem;
+    width: 70px;
+    height: 70px;
+    background-color: $circle-dark-color;
+    border-radius: 50px;
+    color: $white-navbar-footer;
+    
 }
 
 //fin de los Mixins
@@ -46,10 +63,247 @@ html{
      .nav-bar-title{
         font-size: 2rem;
         font-weight: 200;
+        margin: 0;
+        left: 0;
      }
      
 }
 
+#slider{
+    height: 300px;
+    overflow: hidden;
+    background-color: $black-color;
+    figure{
+        position: relative;
+        width: 500%;
+        animation: 10s slider infinite;
+        img{
+            width: 20%;
+            float: left;
+            height: 300px;
+            object-fit:contain;
+        }
+    }
+}
+a{
+    text-decoration: none;
+    color: $black-color;
+}
+
+.intro-banner{
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.text-banner{
+    width: 100%;
+    height: 85px;
+    background-color: $gray-elements;
+    color: $white-navbar-footer;
+    text-align: center;
+    font-size: 3rem;
+    
+}
+.text-body{
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 1rem;
+    font-family: $font-stack;
+    font-weight: 400;
+}
+.button-yellow{
+    height: 54px;
+    width: 297px;
+    align-self: center;
+    background-color: $color-yellow;
+    border-style: none;
+    font-size: 1.6rem ;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    &:hover{
+        background-color: $yellow-over ;
+        color: $white-navbar-footer;
+    }
+}
+.nuestros-servicios{
+    @extend .text-banner;
+    height: 50px;
+    margin-top: 2rem;
+}
+
+.services-image-preview{
+    display: block;
+    margin: 0 auto;
+    width: 236px;
+    height: 307px;
+    object-fit: contain;
+    margin-top: 2rem;
+    right: 0;
+    left: 0;
+}
+
+.service{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.service-number{
+    @include circleServices();
+ }
+ .service-title{
+    font-size: 3.2rem;
+    margin-bottom: 0rem;
+ }
+ .service-description{
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 1rem;
+ }
+ .service-button{
+    width: 300px;
+    height: 32px;
+    font-size: 1.6rem ;
+    cursor: pointer;
+    background-color: $circle-dark-color;
+    color: $white-navbar-footer;
+    margin-bottom: 1.6rem;
+ }
+
+ .about-us{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+ }
+
+ .staff-photo{
+   width: 100%;
+   height: 327px;
+   object-fit: contain;
+   position: absolute;
+   z-index: 3;
+   bottom: -2140px;
+
+ }
+
+ .nosotros-text{
+    position: absolute;
+    font-size: 5rem;
+    bottom: -1935px;
+    left: 100px;
+    z-index: 1;
+ }
+
+ footer{
+    background-color: $white-navbar-footer;
+  
+ }
+ .about-us-text{
+    margin-top: 10rem;
+}
+ .footer-icon{
+    width: 40px;
+    height: 40px;
+ }
+
+ .social-media-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+ }
+
+ //estilos pagina bodas.
+.intro-section{
+    display: flex;
+    flex-direction: column;
+}
+ .bodas-cover-image{
+    width: 100%;
+    position: relative;
+ }
+
+ .bodas-cover-text{
+    position: absolute;
+    width: 150px;
+    top: 50px;
+    left: 125px;
+    text-align: center;
+    padding: 0.5rem;
+    background-color: $gray-elements;
+    color: $white-navbar-footer;
+    font-size: 1.6rem;
+ }
+
+.bodas-reservar-button{
+    @extend .button-yellow;
+    width: 150px;
+    position: absolute;
+    align-self: center;
+    top: 300px;
+}
+.info-text{
+    margin-top: 3rem;
+}
+.single-image{
+    width: 100%;
+}
+.info-title{
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    font-size: 2rem;
+    text-align: center;
+}
+.divider-title{
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    height: 2px;
+    background-color: $gray-elements;
+}
+.presupuesto-container{
+    display: flex;
+    flex-direction: column;
+
+}
+.image-gallery{
+    width: 100%;
+}
+
+
+@keyframes slider {
+    0%{
+        left: 0;
+    }
+    20%{
+        left: 0;
+    }
+    25%{
+        left: -100%;
+    }
+    45%{
+        left: -100%;
+    }
+    50%{
+        left: -200%;
+    }
+    70%{
+        left: -200%;
+    }
+    75%{
+        left: -300%;
+    }
+    95%{
+        left: -300%;
+    }
+    100%{
+        left: -400%;
+    }
+}
 
 
 
