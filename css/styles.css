@@ -10,6 +10,27 @@ html {
   font-family: "Poppins", sans-serif;
 }
 
+.mobile-menu {
+  position: absolute;
+  background-color: rgba(242, 242, 242, 0.9450980392);
+  width: 100%;
+  height: 300px;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+}
+.mobile-menu .mobile-menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+}
+.mobile-menu .mobile-menu-list .mobile-menu-list-element {
+  font-size: 2rem;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
 .nav-bar {
   width: 100%;
   height: 6rem;
@@ -19,6 +40,7 @@ html {
   align-items: center;
   background-color: #F2F2F2;
   padding: 1rem;
+  z-index: 3;
 }
 .nav-bar .edlficon-img {
   width: 4rem;
@@ -99,7 +121,7 @@ a {
 
 .nuestros-servicios {
   height: 50px;
-  margin-top: 2rem;
+  margin-top: 0rem;
 }
 
 .services-image-preview {
@@ -170,13 +192,13 @@ a {
      object-fit: contain;
   position: absolute;
   z-index: 3;
-  bottom: -2140px;
+  top: 60px;
 }
 
 .nosotros-text {
   position: absolute;
   font-size: 5rem;
-  bottom: -1935px;
+  top: 110px;
   left: 100px;
   z-index: 1;
 }
@@ -186,7 +208,7 @@ footer {
 }
 
 .about-us-text {
-  margin-top: 10rem;
+  margin-top: 15rem;
 }
 
 .footer-icon {
@@ -295,4 +317,7 @@ footer {
   100% {
     left: -400%;
   }
+}
+.inactive {
+  display: none;
 }/*# sourceMappingURL=styles.css.map */

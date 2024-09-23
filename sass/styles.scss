@@ -7,6 +7,8 @@ $yellow-over: #907a3a;
 $text-color: #F2F2F2;
 $black-color: #262626;
 $circle-dark-color: #404040;
+$transparentWhite:  #f2f2f2f1;
+
 //Mixins a usar
 @mixin iconsize{
     width: 4rem;
@@ -43,6 +45,29 @@ html{
     font-family: $font-stack;
 }
 
+//Mobile menú
+.mobile-menu{
+ position: absolute;   
+ background-color: $transparentWhite;
+ width: 100%;
+ height: 300px;
+ z-index: 4;
+ display: flex;
+ flex-direction: column;
+ .mobile-menu-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    list-style: none;
+    .mobile-menu-list-element{
+        font-size:2rem;
+        margin-top: 2rem;
+        cursor: pointer;
+    }
+ }
+
+}
 
 .nav-bar{
     width: 100%;
@@ -53,7 +78,8 @@ html{
     align-items: center;
     background-color: $white-navbar-footer;
     padding: 1rem;
-    
+
+    z-index: 3;
     .edlficon-img{
         @include iconsize();
      }
@@ -129,7 +155,7 @@ a{
 .nuestros-servicios{
     @extend .text-banner;
     height: 50px;
-    margin-top: 2rem;
+    margin-top: 0rem;
 }
 
 .services-image-preview{
@@ -185,14 +211,14 @@ a{
    object-fit: contain;
    position: absolute;
    z-index: 3;
-   bottom: -2140px;
+   top: 60px;
 
  }
 
  .nosotros-text{
     position: absolute;
     font-size: 5rem;
-    bottom: -1935px;
+    top: 110px;
     left: 100px;
     z-index: 1;
  }
@@ -202,7 +228,7 @@ a{
   
  }
  .about-us-text{
-    margin-top: 10rem;
+    margin-top: 15rem;
 }
  .footer-icon{
     width: 40px;
@@ -309,5 +335,7 @@ a{
     }
 }
 
-
+.inactive{
+    display: none;
+}
 
