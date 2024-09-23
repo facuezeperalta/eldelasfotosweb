@@ -8,13 +8,12 @@ $text-color: #F2F2F2;
 $black-color: #262626;
 $circle-dark-color: #404040;
 $transparentWhite:  #f2f2f2f1;
-
+$breakpoints: (md: 930px);
 //Mixins a usar
 @mixin iconsize{
     width: 4rem;
     height: 4rem;
 }
-
 @mixin circleServices{
     display: flex;
    justify-content: center;
@@ -26,8 +25,13 @@ $transparentWhite:  #f2f2f2f1;
     height: 70px;
     background-color: $circle-dark-color;
     border-radius: 50px;
-    color: $white-navbar-footer;
-    
+    color: $white-navbar-footer;   
+}
+
+@mixin desktopview{
+    @media screen and (min-width: 1010px){
+        @content;
+    }
 }
 
 //fin de los Mixins
@@ -38,6 +42,7 @@ $transparentWhite:  #f2f2f2f1;
     margin: 0;
     padding: 0;
 }
+
 
 
 html{
@@ -58,7 +63,6 @@ html{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
     list-style: none;
     .mobile-menu-list-element{
         font-size:2rem;
@@ -78,13 +82,26 @@ html{
     align-items: center;
     background-color: $white-navbar-footer;
     padding: 1rem;
-
+    .nav-bar-desktop-view{
+        display: none;
+    }
+    @include desktopview{
+        .nav-bar-desktop-view{
+            display: flex;
+            width: 300px;
+            list-style: none;
+            justify-content: space-evenly;
+        }
+    }
     z-index: 3;
     .edlficon-img{
         @include iconsize();
      }
      .menu-icon{
          @include iconsize();
+         @include desktopview{
+            display: none;
+         }
      }
      .nav-bar-title{
         font-size: 2rem;
@@ -99,6 +116,9 @@ html{
     height: 300px;
     overflow: hidden;
     background-color: $black-color;
+    @include desktopview(){
+        height: 500px;
+    }
     figure{
         position: relative;
         width: 500%;
@@ -108,6 +128,10 @@ html{
             float: left;
             height: 300px;
             object-fit:contain;
+            @include desktopview(){
+                object-fit: contain;
+                height: 500px;
+            }
         }
     }
 }
@@ -129,7 +153,9 @@ a{
     color: $white-navbar-footer;
     text-align: center;
     font-size: 3rem;
-    
+    display: flex;
+    flex-direction: column;
+    place-content: center;  
 }
 .text-body{
     font-size: 1.6rem;
@@ -168,12 +194,24 @@ a{
     right: 0;
     left: 0;
 }
+.services-countainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    @include desktopview(){
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+}
 
 .service{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+  
     
 }
 .service-number{
@@ -267,12 +305,16 @@ a{
 .bodas-reservar-button{
     @extend .button-yellow;
     width: 150px;
-    position: absolute;
     align-self: center;
     top: 300px;
+
 }
 .info-text{
     margin-top: 3rem;
+    @include desktopview(){
+        padding: 5rem;
+        margin-top: 0;
+    }
 }
 .single-image{
     width: 100%;
@@ -291,13 +333,59 @@ a{
     height: 2px;
     background-color: $gray-elements;
 }
+.experience-info-container{
+    display: flex;
+    flex-direction: column;
+    @include desktopview(){
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+}
+.notecasastodoslosdias{
+    display: flex;
+    flex-direction: column;
+
+    @include desktopview(){
+        flex-direction: row;
+        
+    }
+    .info-notecasastodoslosdias{
+        align-self: center;
+        img{
+            padding: 1rem;
+            width: 100%;
+            height: 100%;
+            align-self: flex-end;
+        }
+    }
+    img{
+        width: 50%;
+        height: 50%;
+        align-self: center;
+        margin-bottom: 1rem;
+    }
+}
 .presupuesto-container{
     display: flex;
     flex-direction: column;
 
 }
+.photo-gallery{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include desktopview(){
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-auto-rows: auto;
+        
+    }
+}
 .image-gallery{
     width: 100%;
+    display: flex;
+
 }
 //estilos quinces page
 .quinces-reservar-button{

@@ -42,6 +42,17 @@ html {
   padding: 1rem;
   z-index: 3;
 }
+.nav-bar .nav-bar-desktop-view {
+  display: none;
+}
+@media screen and (min-width: 1010px) {
+  .nav-bar .nav-bar-desktop-view {
+    display: flex;
+    width: 300px;
+    list-style: none;
+    justify-content: space-evenly;
+  }
+}
 .nav-bar .edlficon-img {
   width: 4rem;
   height: 4rem;
@@ -49,6 +60,11 @@ html {
 .nav-bar .menu-icon {
   width: 4rem;
   height: 4rem;
+}
+@media screen and (min-width: 1010px) {
+  .nav-bar .menu-icon {
+    display: none;
+  }
 }
 .nav-bar .nav-bar-title {
   font-size: 2rem;
@@ -62,6 +78,11 @@ html {
   overflow: hidden;
   background-color: #262626;
 }
+@media screen and (min-width: 1010px) {
+  #slider {
+    height: 500px;
+  }
+}
 #slider figure {
   position: relative;
   width: 500%;
@@ -73,6 +94,13 @@ html {
   height: 300px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+@media screen and (min-width: 1010px) {
+  #slider figure img {
+    -o-object-fit: contain;
+       object-fit: contain;
+    height: 500px;
+  }
 }
 
 a {
@@ -94,6 +122,9 @@ a {
   color: #F2F2F2;
   text-align: center;
   font-size: 3rem;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
 }
 
 .text-body {
@@ -134,6 +165,20 @@ a {
   margin-top: 2rem;
   right: 0;
   left: 0;
+}
+
+.services-countainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (min-width: 1010px) {
+  .services-countainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .service {
@@ -247,13 +292,18 @@ footer {
 
 .bodas-reservar-button, .quinces-reservar-button {
   width: 150px;
-  position: absolute;
   align-self: center;
   top: 300px;
 }
 
 .info-text {
   margin-top: 3rem;
+}
+@media screen and (min-width: 1010px) {
+  .info-text {
+    padding: 5rem;
+    margin-top: 0;
+  }
 }
 
 .single-image {
@@ -276,13 +326,64 @@ footer {
   background-color: #737373;
 }
 
+.experience-info-container {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1010px) {
+  .experience-info-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+}
+
+.notecasastodoslosdias {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1010px) {
+  .notecasastodoslosdias {
+    flex-direction: row;
+  }
+}
+.notecasastodoslosdias .info-notecasastodoslosdias {
+  align-self: center;
+}
+.notecasastodoslosdias .info-notecasastodoslosdias img {
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  align-self: flex-end;
+}
+.notecasastodoslosdias img {
+  width: 50%;
+  height: 50%;
+  align-self: center;
+  margin-bottom: 1rem;
+}
+
 .presupuesto-container {
   display: flex;
   flex-direction: column;
 }
 
+.photo-gallery {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+@media screen and (min-width: 1010px) {
+  .photo-gallery {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-auto-rows: auto;
+  }
+}
+
 .image-gallery {
   width: 100%;
+  display: flex;
 }
 
 .quinces-reservar-button {
