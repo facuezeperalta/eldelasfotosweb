@@ -273,7 +273,11 @@ a{
 .image-gallery{
     width: 100%;
 }
-
+//estilos quinces page
+.quinces-reservar-button{
+    @extend .bodas-reservar-button;
+    left: 120px;
+}
 
 @keyframes slider {
     0%{

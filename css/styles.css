@@ -82,7 +82,7 @@ a {
   font-weight: 400;
 }
 
-.button-yellow, .bodas-reservar-button {
+.button-yellow, .bodas-reservar-button, .quinces-reservar-button {
   height: 54px;
   width: 297px;
   align-self: center;
@@ -92,7 +92,7 @@ a {
   cursor: pointer;
   margin-bottom: 1rem;
 }
-.button-yellow:hover, .bodas-reservar-button:hover {
+.button-yellow:hover, .bodas-reservar-button:hover, .quinces-reservar-button:hover {
   background-color: #907a3a;
   color: #F2F2F2;
 }
@@ -223,7 +223,7 @@ footer {
   font-size: 1.6rem;
 }
 
-.bodas-reservar-button {
+.bodas-reservar-button, .quinces-reservar-button {
   width: 150px;
   position: absolute;
   align-self: center;
@@ -261,6 +261,10 @@ footer {
 
 .image-gallery {
   width: 100%;
+}
+
+.quinces-reservar-button {
+  left: 120px;
 }
 
 @keyframes slider {
