@@ -16,7 +16,7 @@ $breakpoints: (md: 930px);
 }
 @mixin imageSizeH(){
     margin-top: 10px;
-    width: 600px;
+    width: 75%;
     height: 100%;
     object-fit: fill;
     position: relative;
@@ -344,6 +344,10 @@ a{
     top: 300px;
 
 }
+
+.info{
+    margin-top: 2rem;
+}
 .info-text{
     width: 100%;
     margin-top: 3rem;
@@ -396,13 +400,15 @@ a{
     margin-bottom: 20px;
 }
 .image-parrafo{
-    height: 300px;
+    height: 25%;
+    width: 50%;
 }
 .photo-gallery{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 15px;
     margin-bottom: 20px;
+    height: auto;
     .image-gallery{
         width: 100%;
         height: auto;

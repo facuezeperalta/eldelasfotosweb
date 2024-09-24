@@ -301,7 +301,7 @@ footer {
 
 .bodas-cover-image {
   margin-top: 10px;
-  width: 600px;
+  width: 75%;
   height: 100%;
   -o-object-fit: fill;
      object-fit: fill;
@@ -327,6 +327,10 @@ footer {
   top: 300px;
 }
 
+.info {
+  margin-top: 2rem;
+}
+
 .info-text {
   width: 100%;
   margin-top: 3rem;
@@ -340,7 +344,7 @@ footer {
 
 .single-image {
   margin-top: 10px;
-  width: 600px;
+  width: 75%;
   height: 100%;
   -o-object-fit: fill;
      object-fit: fill;
@@ -396,7 +400,8 @@ footer {
 }
 
 .image-parrafo {
-  height: 300px;
+  height: 25%;
+  width: 50%;
 }
 
 .photo-gallery {
@@ -404,6 +409,7 @@ footer {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 15px;
   margin-bottom: 20px;
+  height: auto;
 }
 .photo-gallery .image-gallery {
   width: 100%;
