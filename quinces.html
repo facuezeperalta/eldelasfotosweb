@@ -8,11 +8,20 @@
     <title>EDLF | Quinces</title>
 </head>
 <body>
-    <header>
+    <header class="header-other-pages"></header>
         <nav class="nav-bar">
-            <img src="./assets/icons/edlf-icon-01.svg" alt="eldelasfotos icon logo" class="edlficon-img">
-            <p class="nav-bar-title"><a href="./index.html">El de las fotos</a></p>
+            <div class="nav-bar-logo">
+                <img src="./assets/icons/edlf-icon-01.svg" alt="eldelasfotos icon logo" class="edlficon-img">
+                <p class="nav-bar-title"> <a href="./index.html">El de las fotos</a></p>
+            </div>
             <img src="./assets/icons/menu-icon.svg" alt="menu icon" class="menu-icon">
+            <ul class="nav-bar-desktop-view">
+                <li class="element-navbar e1"><a href="./index.html">Incio</a></li>
+                <li class="element-navbar e2"><a href="./bodas.html">Bodas</a></li>
+                <li class="element-navbar e3"><a href="./quinces.html">Quinces</a></li>
+                <li class="element-navbar e4"><a href="./familia.html">Familia</a></li>
+                <li class="element-navbar e1"><a href="./quienessomos.html">Sobre Nosotros</a></li>
+            </ul>
         </nav>
     </header>
     <section class="mobile-menu inactive ">
@@ -24,14 +33,13 @@
             <li class="mobile-menu-list-element"><a href="./quienessomos.html">Sobre Nosotros</a></li>
         </ul>
     </section>
-    <section class="intro-section"></section>
-        <div class="bodas-cover-container">
-            <img class="bodas-cover-image" src="./assets/images/Quinces/Sol-Book-02- 24.jpg" alt="Foto principal bodas">
+    <section class="intro-section">
+        <div class="quinces-cover-image">
+            <img class="bodas-cover-image" src="./assets/images/Quinces/Sol-Book-02- 24.jpg" alt="Foto principal Quinces">
             <div class="cover-text-container">
                 <!-- <p class="bodas-cover-text">Contamos su historia</p> -->
             </div>
         </div>
-       
         <button class="quinces-reservar-button"><a href="https://wa.me/5493543642279">¡Quiero reservar!</a></button>
     </section>
     <section class="info-section">
@@ -41,17 +49,18 @@
         <p class="text-banner">Viví una experiencia única</>
     </section>
 
-    <section class="experience-info-container"></section>
+    <section class="experience-info-container">
         <div class="info">
             <p class="info-title">Sesión de fotos previa</p>
             <hr class="divider-title">
-            <p class="text-body">Juntos creamos una sesión de fotos basada en tus gustos, fotos originales y creativas tanto como vos quieras.</p>
+            <p class="text-body">Juntos creamos una sesión de fotos basada en tus gustos <br> fotos originales y creativas tanto como vos quieras.</p>
         </div>
         <div class="info">
             <p class="info-title">El gran día</p>
             <hr class="divider-title">
-            <p class="text-body">Una cobertura completa del día de tu fiesta. Con todos los momentos importantes capturados.</p>
+            <p class="text-body">Una cobertura completa del día de tu fiesta. <br> Con todos los momentos importantes capturados.</p>
         </div>
+        
        <!--  <div class="info">
             <p class="info-title">Post boda</p>
             <hr class="divider-title">
@@ -60,9 +69,16 @@
     </section>
     <section class="presupuesto-container">
         <p class="text-banner">Presupuestos a tu medida</p>
-        <p class="text-body">Cada Quince es único, y por eso creamos presupuestos personalizados para vos. Contanos lo que necesitás y te enviaremos una cotización a tu medida. ¡Estamos para ayudarte a hacer realidad tu día especial!</p>
-        <button class="button-yellow"><a href="https://wa.me/5493543642279">¡Quiero una cotización para mis quinces!</a></button>
-        <img src="./assets/images/Quinces/Book-Cande- 50.jpg" alt="">
+        <div class="presupuestos-content">
+            <div class="text-and-button-quinces">
+                <h2>Cada Quince es único</h2>
+                <p class="text-body"> Y por eso creamos presupuestos personalizados para vos. <br> Contanos lo que necesitás y te enviaremos una cotización a tu medida. <br> ¡Estamos para ayudarte a hacer realidad tu día especial!</p>
+                <button class="button-yellow"><a href="https://wa.me/5493543642279">¡Quiero una cotización para mis quinces!</a></button>
+            </div>
+            
+            <img class="single-image " src="./assets/images/Quinces/Book-Cande- 50.jpg" alt="">
+        </div>
+       
     </section>
     <section class="photo-gallery">
         <img class="image-gallery" src="./assets/images/Quinces/Jaz-Book 2- 12.jpg" alt="foto de bodas con dos novios besandose.">
@@ -76,9 +92,6 @@
         <img class="image-gallery" src="./assets/images/Quinces/Compresed- 2.jpg" alt="">
         <img class="image-gallery" src="./assets/images/Quinces/Compresed- 3.jpg" alt="">
         <img class="image-gallery" src="./assets/images/Quinces/Compresed- 4.jpg" alt="">
-        <img class="image-gallery" src="./assets/images/Quinces/Compresed- 5.jpg" alt="">
-        <img class="image-gallery" src="./assets/images/Quinces/Compresed- 6.jpg" alt="">
-        <img class="image-gallery" src="./assets/images/Quinces/Compresed- 7.jpg" alt="">
     </section>
     <footer>
         <p class="text-body">©eldelasfotos</p>
