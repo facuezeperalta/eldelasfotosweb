@@ -340,7 +340,9 @@ footer {
 }
 
 .info {
+  align-self: center;
   margin-top: 2rem;
+  width: 50%;
 }
 
 .info-text {
@@ -405,6 +407,7 @@ footer {
     margin-bottom: 50px;
     place-content: center;
     justify-content: space-evenly;
+    padding: 20px;
   }
 }
 

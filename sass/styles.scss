@@ -353,11 +353,12 @@ a{
     width: 150px;
     align-self: center;
     top: 300px;
-
 }
 
 .info{
+    align-self: center;
     margin-top: 2rem;
+    width: 50%;
 }
 .info-text{
     width: 100%;
@@ -406,6 +407,7 @@ a{
         margin-bottom: 50px;
         place-content: center;
         justify-content: space-evenly;
+        padding: 20px;
         
     }
 }
