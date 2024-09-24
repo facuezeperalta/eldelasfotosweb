@@ -3,7 +3,7 @@ $font-stack: "Poppins", sans-serif;
 $white-navbar-footer: #F2F2F2;
 $gray-elements: #737373;
 $color-yellow: #F2CF66;
-$yellow-over: #907a3a;
+$yellow-over: #edb50e;
 $text-color: #F2F2F2;
 $black-color: #262626;
 $circle-dark-color: #404040;
@@ -13,6 +13,14 @@ $breakpoints: (md: 930px);
 @mixin iconsize{
     width: 4rem;
     height: 4rem;
+}
+@mixin imageSizeH(){
+    margin-top: 10px;
+    width: 600px;
+    height: 100%;
+    object-fit: fill;
+    position: relative;
+    align-items: center;
 }
 @mixin circleServices{
     display: flex;
@@ -144,7 +152,7 @@ a{
     height: 250px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .text-banner{
     width: 100%;
@@ -156,6 +164,8 @@ a{
     display: flex;
     flex-direction: column;
     place-content: center;  
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 .text-body{
     font-size: 1.6rem;
@@ -163,9 +173,11 @@ a{
     padding: 1rem;
     font-family: $font-stack;
     font-weight: 400;
+    
+ 
 }
 .button-yellow{
-    height: 54px;
+    height: 50px;
     width: 297px;
     align-self: center;
     background-color: $color-yellow;
@@ -173,9 +185,12 @@ a{
     font-size: 1.6rem ;
     cursor: pointer;
     margin-bottom: 1rem;
+    transition: transform 500ms;
+    transition-delay: 0.1s;
+
     &:hover{
-        background-color: $yellow-over ;
-        color: $white-navbar-footer;
+        transform: scale(1.1);
+        background-color: $yellow-over;
     }
 }
 .nuestros-servicios{
@@ -285,9 +300,11 @@ a{
     display: flex;
     flex-direction: column;
 }
+.cover-image-container{
+    text-align: center;
+}
  .bodas-cover-image{
-    width: 100%;
-    position: relative;
+  @include imageSizeH();
  }
 
  .bodas-cover-text{
@@ -310,6 +327,7 @@ a{
 
 }
 .info-text{
+    width: 100%;
     margin-top: 3rem;
     @include desktopview(){
         padding: 5rem;
@@ -317,7 +335,7 @@ a{
     }
 }
 .single-image{
-    width: 100%;
+    @include imageSizeH();
 }
 .info-title{
     margin-top: 1rem;
@@ -345,46 +363,34 @@ a{
 .notecasastodoslosdias{
     display: flex;
     flex-direction: column;
-
-    @include desktopview(){
-        flex-direction: row;
-        
-    }
-    .info-notecasastodoslosdias{
-        align-self: center;
-        img{
-            padding: 1rem;
-            width: 100%;
-            height: 100%;
-            align-self: flex-end;
-        }
-    }
-    img{
-        width: 50%;
-        height: 50%;
-        align-self: center;
-        margin-bottom: 1rem;
-    }
+    margin-top: 50px;
 }
 .presupuesto-container{
     display: flex;
     flex-direction: column;
 
 }
-.photo-gallery{
+.image-parrafo-container{
     display: flex;
-    flex-direction: column;
     width: 100%;
-    @include desktopview(){
-        display: grid;
-        grid-template-columns: auto auto;
-        grid-auto-rows: auto;
-        
-    }
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
 }
-.image-gallery{
-    width: 100%;
-    display: flex;
+.image-parrafo{
+    height: 300px;
+}
+.photo-gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+    .image-gallery{
+        width: 100%;
+        height: auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+    }
 
 }
 //estilos quinces page

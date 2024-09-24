@@ -112,7 +112,7 @@ a {
   height: 250px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .text-banner, .nuestros-servicios {
@@ -125,6 +125,8 @@ a {
   display: flex;
   flex-direction: column;
   place-content: center;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
 .text-body {
@@ -136,7 +138,7 @@ a {
 }
 
 .button-yellow, .bodas-reservar-button, .quinces-reservar-button {
-  height: 54px;
+  height: 50px;
   width: 297px;
   align-self: center;
   background-color: #F2CF66;
@@ -144,10 +146,12 @@ a {
   font-size: 1.6rem;
   cursor: pointer;
   margin-bottom: 1rem;
+  transition: transform 500ms;
+  transition-delay: 0.1s;
 }
 .button-yellow:hover, .bodas-reservar-button:hover, .quinces-reservar-button:hover {
-  background-color: #907a3a;
-  color: #F2F2F2;
+  transform: scale(1.1);
+  background-color: #edb50e;
 }
 
 .nuestros-servicios {
@@ -273,9 +277,18 @@ footer {
   flex-direction: column;
 }
 
+.cover-image-container {
+  text-align: center;
+}
+
 .bodas-cover-image {
-  width: 100%;
+  margin-top: 10px;
+  width: 600px;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
   position: relative;
+  align-items: center;
 }
 
 .bodas-cover-text {
@@ -297,6 +310,7 @@ footer {
 }
 
 .info-text {
+  width: 100%;
   margin-top: 3rem;
 }
 @media screen and (min-width: 1010px) {
@@ -307,7 +321,13 @@ footer {
 }
 
 .single-image {
-  width: 100%;
+  margin-top: 10px;
+  width: 600px;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+  position: relative;
+  align-items: center;
 }
 
 .info-title {
@@ -341,26 +361,7 @@ footer {
 .notecasastodoslosdias {
   display: flex;
   flex-direction: column;
-}
-@media screen and (min-width: 1010px) {
-  .notecasastodoslosdias {
-    flex-direction: row;
-  }
-}
-.notecasastodoslosdias .info-notecasastodoslosdias {
-  align-self: center;
-}
-.notecasastodoslosdias .info-notecasastodoslosdias img {
-  padding: 1rem;
-  width: 100%;
-  height: 100%;
-  align-self: flex-end;
-}
-.notecasastodoslosdias img {
-  width: 50%;
-  height: 50%;
-  align-self: center;
-  margin-bottom: 1rem;
+  margin-top: 50px;
 }
 
 .presupuesto-container {
@@ -368,22 +369,29 @@ footer {
   flex-direction: column;
 }
 
-.photo-gallery {
+.image-parrafo-container {
   display: flex;
-  flex-direction: column;
   width: 100%;
-}
-@media screen and (min-width: 1010px) {
-  .photo-gallery {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-auto-rows: auto;
-  }
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-.image-gallery {
+.image-parrafo {
+  height: 300px;
+}
+
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.photo-gallery .image-gallery {
   width: 100%;
-  display: flex;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
 
 .quinces-reservar-button {
