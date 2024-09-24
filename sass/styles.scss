@@ -17,10 +17,14 @@ $breakpoints: (md: 930px);
 @mixin imageSizeH(){
     margin-top: 10px;
     width: 75%;
-    height: 100%;
     object-fit: fill;
     position: relative;
     align-items: center;
+}
+@mixin imageForGallery{
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
 }
 @mixin circleServices{
     display: flex;
@@ -173,7 +177,7 @@ a{
 }
 .text-banner{
     width: 100%;
-    height: 85px;
+    height: auto;
     background-color: $gray-elements;
     color: $white-navbar-footer;
     text-align: center;
@@ -190,6 +194,8 @@ a{
     padding: 1rem;
     font-family: $font-stack;
     font-weight: 400;
+    margin-bottom: 20px;
+    margin-top: 20px;
     
  
 }
@@ -270,7 +276,7 @@ a{
  }
 
  .about-us{
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -278,20 +284,28 @@ a{
 
  .staff-photo{
    width: 100%;
-   height: 327px;
+   height: 50%;
    object-fit: contain;
    position: absolute;
    z-index: 3;
-   top: 60px;
+   top:70px;
+   @include desktopview(){
+    transition: transform 0.5s ease-in;
+    &:hover{
+     transform: scale(1.1);
+    }
+   }
+  
 
  }
 
  .nosotros-text{
-    position: absolute;
+    text-align: center;
+    position: relative;
     font-size: 5rem;
-    top: 110px;
-    left: 100px;
     z-index: 1;
+    height: 250px;
+
  }
 
  footer{
@@ -299,7 +313,7 @@ a{
   
  }
  .about-us-text{
-    margin-top: 15rem;
+    margin-top: 1rem;
 }
  .footer-icon{
     width: 40px;
@@ -321,6 +335,7 @@ a{
 }
 .cover-image-container{
     text-align: center;
+    margin-bottom: 20px;
 }
  .bodas-cover-image{
   @include imageSizeH();
@@ -370,6 +385,12 @@ a{
 }
 .single-image{
     @include imageSizeH();
+
+}
+.image-wedding-1{
+    width: 75%;
+    height: 100%;
+    object-fit: fill;
 }
 .info-title{
     margin-top: 1rem;
@@ -424,10 +445,7 @@ a{
     margin-bottom: 50px;
     align-items: center;
     justify-content: center;
-    img{
-        width: 500px;
-    }
-    .presupuestos-content{
+    .presupuestos-contentier{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -478,13 +496,9 @@ a{
     gap: 15px;
     margin-bottom: 20px;
     height: auto;
-    .image-gallery{
-        width: 100%;
-        height: auto;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease;
-    }
-
+}
+.image-gallery{
+    @include imageForGallery();
 }
 //estilos quinces page
 .quinces-reservar-button{
