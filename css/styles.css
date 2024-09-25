@@ -497,6 +497,14 @@ footer {
   align-items: center;
   margin-top: 30px;
 }
+.presupuesto-container .text-and-button-quinces {
+  display: flex;
+  height: auto;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .image-parrafo-container {
   display: flex;
   width: 100%;

@@ -497,6 +497,11 @@ a{
         
     }
     .text-and-button-quinces{
+        display: flex;
+        height: auto;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
     }  
 }
 .image-parrafo-container{
