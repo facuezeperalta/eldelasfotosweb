@@ -274,34 +274,39 @@ a {
   -o-object-fit: contain;
      object-fit: contain;
   position: relative;
-  z-index: 3;
-  top: 30px;
+  z-index: 0;
 }
 @media screen and (min-width: 1000px) {
   .staff-photo {
     transition: transform 0.5s ease-in;
   }
   .staff-photo:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 }
 
-.nosotros-text {
-  text-align: center;
-  position: relative;
-  font-size: 5rem;
-  z-index: 1;
-  height: 400px;
-}
+/* 
+ .nosotros-text{
+    text-align: center;
+    position: relative;
+    font-size: 6rem;
+    z-index: 1;
+    height: 350px + 50px;
 
+ } */
 footer {
   background-color: #F2F2F2;
 }
 
 .about-us-text {
-  margin-top: 3rem;
+  z-index: 4;
 }
-
+@media screen and (min-width: 1000px) {
+  .about-us-text {
+    margin-top: 5rem;
+    font-size: 2.5rem;
+  }
+}
 .footer-icon {
   width: 40px;
   height: 40px;
@@ -430,7 +435,8 @@ footer {
 }
 @media screen and (max-width: 1000px) {
   .info-title {
-    font-size: 1.6rem;
+    font-size: 2.8rem;
+    font-weight: bold;
   }
 }
 @media screen and (min-width: 1000px) {
@@ -569,4 +575,28 @@ footer {
 }
 .inactive {
   display: none;
+}
+
+.photo-staff-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+.photo-staff-container img {
+  height: 50%;
+  width: 50%;
+}
+
+@media screen and (min-width: 1000px) {
+  .quince-unico {
+    font-size: 6rem;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .quince-unico {
+    font-size: 2.5rem;
+    margin-top: 20px;
+  }
 }/*# sourceMappingURL=styles.css.map */
