@@ -269,13 +269,13 @@ a {
 }
 
 .staff-photo {
-  width: 100%;
+  width: 50%;
   height: 50%;
   -o-object-fit: contain;
      object-fit: contain;
-  position: absolute;
+  position: relative;
   z-index: 3;
-  top: 70px;
+  top: 30px;
 }
 @media screen and (min-width: 1000px) {
   .staff-photo {
@@ -291,7 +291,7 @@ a {
   position: relative;
   font-size: 5rem;
   z-index: 1;
-  height: 250px;
+  height: 400px;
 }
 
 footer {
@@ -299,7 +299,7 @@ footer {
 }
 
 .about-us-text {
-  margin-top: 1rem;
+  margin-top: 3rem;
 }
 
 .footer-icon {
