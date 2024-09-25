@@ -11,5 +11,12 @@ function showHideMobileMenu(){
     }
     mobileMenu.classList.toggle('inactive');
 }
+function autoHideMenuScreenResolution(){
+    if(window.innerWidth > 1000){
+        mobileMenu.classList.add('inactive');
+    }
+}
 
 menuBurguerMobie.addEventListener('click',showHideMobileMenu);
+window.addEventListener('resize',autoHideMenuScreenResolution);
+
